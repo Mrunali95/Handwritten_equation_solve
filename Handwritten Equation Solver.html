@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HANDWRITTEN EQUATION SOLVER</title>
+</head>
+<body>
+	<center>
+	<h1>HANDWRITTEN EQUATION SOLVER</h1>
+	<form enctype="multipart/form-data" method="post" action="test.py">
+		<p><input type="file"  accept="image/*" name="filename" id="file"  onchange="loadFile(event)" /></p>
+		<!--p><label for="file" style="cursor: pointer;">Upload Image</label></p-->
+		<p><img id="output" width="400" /></p>
+		
+		<input type="submit" name="sub" value="click to calculate" />
+
+		<script>
+		var loadFile = function(event) {
+			var image = document.getElementById('output');
+			image.src = URL.createObjectURL(event.target.files[0]);
+		};
+		</script>
+		
+		<p>  </p>
+	</form>
+	</center>
+	
+	
+	
+</body>
+</html>
